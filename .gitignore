@@ -1,0 +1,9 @@
+*.otf
+*.OTF
+*.ttf
+*.TTF
+*.bmpr
+.DS_Store
+*.psd
+ps/
+fonts/
