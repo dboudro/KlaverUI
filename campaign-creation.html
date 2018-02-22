@@ -27,6 +27,8 @@
         font-family: Helvetica Neue Light;
         color: #92cbc5;
         font-size: 10px;
+        margin: 0;
+        padding: 0;
       }
       #logo {
         width: 80%;
@@ -70,18 +72,17 @@
         background-color: #92cbc5;
         color: #303030;
         font-size: 1.4em;
-        padding: 30px 7px;
+        padding: 5px 7px;
         border: 0px;
         width: 160px;
-        text-align: center;
-        text-decoration: none;
+        height: 62px;
       }
       #get-started-button {
         margin-top: 60px;
         margin-left: calc(50% - 80px);
       }
       #main-container {
-        border: 0px solid green;
+        border: 1px solid green;
         margin: 0px 25vw 0 25vw;
       }
       a {
@@ -93,24 +94,73 @@
       #login {
         margin-top: 24px;
       }
+      #navbar {
+        background-color: #80CBC4;
+        height: 60px;
+        display: block;
+        position: relative;
+      }
+      .progress-bar {
+        height: 40px;
+        width: 90%;
+        background-color: rgba(255,255,255,.08);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #nav-logo {
+        height: 55px;
+      }
+      #navbar ul {
+        display: inline-block;
+        border: 0px solid red;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        margin: 0;
+      }
+      #navbar ul > li {
+        display: inline-block;
+        width: 300px;
+        border: 0px solid purple;
+        padding: 23px 0;
+      }
+      #navbar ul > li > a {
+        color: #303030;
+        width: 120px;
+        text-decoration: none;
+      }
+
       @media(max-width: 750px) {
         #main-container {
           margin: 0px 0vw 0 0vw;
         }
       }
+      #upgrade-button-item {
+        padding: 17px 0px !important;
+
+      }
+      .upgrade-button {
+        border: 1px solid #303030;
+        border-radius: 14px;
+        padding: 6px 5px;
+        float: right;
+      }
       </style>
     </head>
     <body>
+      <div id="navbar">
+          <img id="nav-logo" src="img/logo_klaver.png"/>
+          <ul>
+            <li> <a href="#">Campaigns</a></li>
+          <li> <a href="#">Support</a></li>
+          <li id="upgrade-button-item"><a class="upgrade-button"> upgrade </a></li>
+        </ul>
+
+      </div>
+      <div class="progress-bar" id="step-2"></div>
       <div id="main-container">
-      <img id="logo" src="img/logo_klaver_edited.png"/>
-      <h2 id="tagline"> machine educated insight engine </h2>
-      <form class="mui-form">
-  <input type="text" placeholder="Email">
-    <input type="text" placeholder="Password">
-      <input type="text" placeholder="Confirm Password">
-  <a href="campaign-creation.html" class="button-primary" id="get-started-button">Get Started</a>
-  <a href="campaign-creation.html" id="login">Login</a>
-</form>
+
+  <button type="submit" id="get-started-button" class="button-primary">Next</button>
 </div>
     </body>
     </html>
