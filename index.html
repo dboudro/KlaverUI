@@ -9,27 +9,56 @@
       <!-- <link rel="stylesheet" type="text/css" href="css/mui.css"/> -->
       <link rel="icon" href="favicon.png" type="image"/>
       <style>
+      @font-face {
+        font-family: Helvetica Neue Light;
+        src: url('fonts/HelveticaNeue-Light.ttf');
+      }
+      @font-face {
+        font-family: Helvetica Neue Medium;
+        src: url('fonts/HelveticaNeue-Medium.ttf');
+      }
+      @font-face {
+        font-family: Helvetica Neue Thin;
+        src: url('fonts/HelveticaNeue-Thin.ttf');
+      }
+
       body {
         background-color: #303030;
+        font-family: Helvetica Neue Light;
         color: #92cbc5;
-        margin: 20vh 20vw 0 20vw;
         font-size: 10px;
       }
       #logo {
-        width: 40vw;
+        width: 80%;
+        margin-left: 24px;
+      }
+      #tagline {
+        font-family: Helvetica Neue Thin;
+        font-size: 1.7em;
+        letter-spacing: 3px;
+        margin-top: -24px;
+        color: #F8F8F8;
+        text-align: center;
       }
       input {
         background-color: #303030;
         border: 1px;
-        border-bottom: 1.5px solid lightgrey;
+        border-bottom: 1px solid rgba(256,256,256,0.12);
         outline: none;
         display: block;
-        height: 64px;
-        width: 500px;
+        height: 90px;
+        width: 80%;
         font-size: 1.4em;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
       }
       input:focus {
         border-bottom: 1.5px solid #92cbc5;
+        color: white;
+      }
+      input::placeholder {
+        color: rgba(256,256,256,0.5);
       }
       button:focus {
         outline: none;
@@ -47,18 +76,40 @@
         height: 62px;
       }
       #get-started-button {
-        margin-top: 20px;
+        margin-top: 60px;
         margin-left: calc(50% - 80px);
+      }
+      #main-container {
+        border: 0px solid green;
+        margin: 0px 25vw 0 25vw;
+      }
+      a {
+        color: #92cbc5;
+        display: table;
+        margin: 0 auto;
+        font-size: 1.4em;
+      }
+      #login {
+        margin-top: 24px;
+      }
+      @media(max-width: 750px) {
+        #main-container {
+          margin: 0px 0vw 0 0vw;
+        }
       }
       </style>
     </head>
     <body>
-      <img id="logo" src="img/logo_klaver.png"/>
+      <div id="main-container">
+      <img id="logo" src="img/logo_klaver_edited.png"/>
+      <h2 id="tagline"> machine educated insight engine </h2>
       <form class="mui-form">
   <input type="text" placeholder="Email">
     <input type="text" placeholder="Password">
       <input type="text" placeholder="Confirm Password">
   <button type="submit" id="get-started-button" class="button-primary">Get Started</button>
+  <a href="#" id="login">Login</a>
 </form>
+</div>
     </body>
     </html>
