@@ -33,8 +33,8 @@
       h3 {
         font-family:Helvetica Neue Light;
         font-size:12px;
-        letter-spacing: 1px;
         color:#6e6e6e;
+        letter-spacing:0;
         text-align:left;
         text-transform: uppercase;
       }
@@ -45,14 +45,14 @@
         outline: none;
         display: block;
         height: 90px;
-        width: 80%;
+        width: calc(95% - 175px);
         font-size: 1.4em;
         margin-left: auto;
         margin-right: auto;
         color: white;
       }
       input:focus {
-        border-bottom: 1.5px solid #92cbc5;
+        border-bottom: 1px solid #92cbc5;
         color: white;
       }
       input::placeholder {
@@ -159,6 +159,7 @@
         width:18px;
         height:18px;
         border-radius:100%;
+        display: table;
       }
 
 
@@ -181,7 +182,7 @@
         padding: 6px 5px;
         float: right;
       }
-      .highlight-1 {
+      .highlight {
         background:rgba(255,255,255,0.08);
         width:20%;
         height:39px;
@@ -189,14 +190,16 @@
         display: inline-block;
         padding: 0;
         margin: 0;
+        text-transform: uppercase;
       }
       .current-step {
         text-align: center;
-        color: white;
+        color: white !important;
         width:20%;
         height: 39px;
         padding: 0;
         display: inline-block;
+        text-transform: uppercase;
       }
       .current-step a {
         color: white;
@@ -213,8 +216,9 @@
       }
       .progress-bar a {
         margin: 14px;
+        font-size:1em;
         text-decoration: none;
-        font-size: 1em;
+        text-align:center;
       }
       .dropdown-button {
         font-family:HelveticaNeue-Light;
@@ -242,6 +246,44 @@
       #title-container {
         margin-top: 60px;
       }
+      #switch-container {
+        width: 100%;
+        height: 40px;
+        display: block;
+      }
+      .switch {
+        height: 34px;
+        border: 1px solid #92cbc5;
+        width: 420px;
+        padding: 0;
+        float: right;
+      }
+      .switch li {
+        list-style: none;
+        display: inline-block;
+      }
+      .switch li button {
+        height: 34px;
+        width: 100px;
+        background-color: #303030;
+        border: 0;
+        color: #92cbc5;
+      }
+      .switch li button:focus {
+        list-style: none;
+        display: inline-block;
+        height: 34px;
+        color: #303030;
+        background-color: #92cbc5;
+      }
+      #url-input {
+        margin: 0;
+        display: inline-block;
+        height: 45px;
+        background:#3a3a3a;
+
+      }
+
       /* * * * * * * * * * * * * * * * * * * * */
       @media(max-width: 750px) {
         #main-container {
@@ -263,28 +305,32 @@
 
       </div>
       <div class="progress-bar" id="step-2">
-        <div class="highlight-1"><a href="index.html">1 ACCOUNT CREATION</a></div>
-        <div class="current-step"><a href="campaign-creation.html">2 CAMPAIGN CREATION</a></div>
+        <div class="highlight"><a href="index.html">1 account creation</a></div>
+        <div class="highlight"><a href="campaign-creation.html">2 campaign creation</a></div>
+        <div class="highlight"><a href="data-sources.html">3 add data sources</a></div>
+        <div class="current-step"><a href="alert-settings.html">4 alert settings</a></div>
       </div>
+
+
       <div id="main-container">
-        <div id="title-container">
-          <div class="dropdown-button"><p> Keywords ^ </p></div>
-          <h2 class="grey-title"> Enter Campaign Keywords To Monitor </h2>
-        </div>
-        <div id="selected-topics-container">
-          <h3> selected topics </h3>
-          <button class="button-filled-small">Bitcoin</button>
-          <button class="button-filled-small">Litecoin</button>
-        </div>
+        <div id="switch-container">
+        <ul class="switch">
+          <li><button>1 hour </button></li>
+          <li><button>1 day</button></li>
+          <li><button>1 week</button></li>
+        </ul>
 
-        <div id="suggested-topics-container">
-          <h3> suggested topics </h3>
-          <button class="button-outline-small">Cryptocurrency</button>
-          <button class="button-outline-small">Investment Banking</button>
-          <button class="button-outline-small">Finance</button>
-        </div>
+        <ul class="switch">
+          <li><button>Email </button></li>
+          <li><button>Text Message</button></li>
+          <li><button>in Klaver</button></li>
+        </ul>
+      </div>
 
-  <button type="submit" id="get-started-button" class="button-secondary"><a href="data-sources.html">NEXT</a></button>
+
+
+
+  <button type="submit" id="get-started-button" class="button-secondary">NEXT</button>
 </div>
     </body>
     </html>

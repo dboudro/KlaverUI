@@ -45,14 +45,14 @@
         outline: none;
         display: block;
         height: 90px;
-        width: 80%;
+        width: calc(95% - 175px);
         font-size: 1.4em;
         margin-left: auto;
         margin-right: auto;
         color: white;
       }
       input:focus {
-        border-bottom: 1.5px solid #92cbc5;
+        border-bottom: 1px solid #92cbc5;
         color: white;
       }
       input::placeholder {
@@ -88,6 +88,11 @@
         outline: none;
         color: #FFFFFF;
         font-size: 1.4em;
+      }
+      .button-secondary a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
       }
       .button-filled-small {
         background:#92cbc5;
@@ -154,6 +159,7 @@
         width:18px;
         height:18px;
         border-radius:100%;
+        display: table;
       }
 
 
@@ -188,12 +194,15 @@
       }
       .current-step {
         text-align: center;
-        color: white;
+        color: white !important;
         width:20%;
         height: 39px;
         padding: 0;
         display: inline-block;
         text-transform: uppercase;
+      }
+      .current-step a {
+        color: white;
       }
       .progress-bar {
         height: 40px;
@@ -205,8 +214,11 @@
         margin-right: auto;
         font-family: Helvetica Neue Medium;
       }
-      .progress-bar p {
+      .progress-bar a {
         margin: 14px;
+        font-size:1em;
+        text-decoration: none;
+        text-align:center;
       }
       .dropdown-button {
         font-family:HelveticaNeue-Light;
@@ -232,12 +244,12 @@
         padding-bottom: 4px;
       }
       #title-container {
-        margin-top: 60px;
+        margin-top: 24px;
       }
       #switch-container {
         width: 100%;
         height: 40px;
-        display: block;
+        display: inline-block;
       }
       .switch {
         height: 34px;
@@ -264,6 +276,30 @@
         color: #303030;
         background-color: #92cbc5;
       }
+      #url-input {
+        margin: 0;
+        display: inline-block;
+        height: 45px;
+        background:#3a3a3a;
+      }
+
+      table, th, td {
+      border:1px solid #8e8e8e;
+      border-collapse: collapse;
+      color:white;
+      }
+      table {
+        margin-top: 60px;
+      }
+      th {
+        background:#3a3a3a;
+        height:32px;
+        color: #6E6E6E;
+      }
+      td {
+        height: 32px;
+        padding-left: 4px;
+      }
 
       /* * * * * * * * * * * * * * * * * * * * */
       @media(max-width: 750px) {
@@ -286,9 +322,9 @@
 
       </div>
       <div class="progress-bar" id="step-2">
-        <div class="highlight"><p>1 account creation</p></div>
-        <div class="highlight"><p>2 campaign creation</p></div>
-        <div class="current-step"><p>3 add data sources</p></div>
+        <div class="highlight"><a href="index.html">1 account creation</a></div>
+        <div class="highlight"><a href="campaign-creation.html">2 campaign creation</a></div>
+        <div class="current-step"><a href="index.html">3 add data sources</a></div>
       </div>
 
 
@@ -298,17 +334,41 @@
           <li><button>news websites</button></li>
           <li><button>social media</button></li>
           <li><button>forums</button></li>
-          <li><button>southeast asia <span class="orange-circle"></span></button></li>
+          <li><button>southeast asia </button></li>
         </ul>
       </div>
 
         <div id="title-container">
           <div class="dropdown-button"><p> Twitter ^ </p></div>
-          <h3 class="grey-title"> https://twitter.com/@bitcoinnew </h3>
+          <input id="url-input"placeholder="https://twitter.com/@bitcoinnew"></input>
         </div>
 
 
-  <button type="submit" id="get-started-button" class="button-secondary">NEXT</button>
+<table style="width:100%">
+  <tr>
+    <th>category</th>
+    <th>sitename</th>
+    <th>url</th>
+  </tr>
+  <tr>
+    <td>social media </td>
+    <td>twitter</td>
+    <td>https://twitter.com/bitcoinnews</td>
+  </tr>
+  <tr>
+    <td>news site</td>
+    <td>BBC</td>
+    <td>bbc.co.uk/newsarticle</td>
+  </tr>
+  <tr>
+    <td>southeast asia</td>
+    <td>Baidu</td>
+    <td>baidu.com/news/taiwan-bans-plastic</td>
+  </tr>
+</table>
+
+
+  <button type="submit" id="get-started-button" class="button-secondary"><a href="alert-settings.html">NEXT</a></button>
 </div>
     </body>
     </html>
