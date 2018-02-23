@@ -33,8 +33,8 @@
       h3 {
         font-family:Helvetica Neue Light;
         font-size:12px;
-        letter-spacing: 1px;
         color:#6e6e6e;
+        letter-spacing:0;
         text-align:left;
         text-transform: uppercase;
       }
@@ -88,11 +88,6 @@
         outline: none;
         color: #FFFFFF;
         font-size: 1.4em;
-      }
-      .button-secondary a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em;
       }
       .button-filled-small {
         background:#92cbc5;
@@ -181,7 +176,7 @@
         padding: 6px 5px;
         float: right;
       }
-      .highlight-1 {
+      .highlight {
         background:rgba(255,255,255,0.08);
         width:20%;
         height:39px;
@@ -189,6 +184,7 @@
         display: inline-block;
         padding: 0;
         margin: 0;
+        text-transform: uppercase;
       }
       .current-step {
         text-align: center;
@@ -197,6 +193,7 @@
         height: 39px;
         padding: 0;
         display: inline-block;
+        text-transform: uppercase;
       }
       .progress-bar {
         height: 40px;
@@ -237,6 +234,37 @@
       #title-container {
         margin-top: 60px;
       }
+      #switch-container {
+        width: 100%;
+        height: 40px;
+        display: block;
+      }
+      .switch {
+        height: 34px;
+        border: 1px solid #92cbc5;
+        width: 420px;
+        padding: 0;
+        float: right;
+      }
+      .switch li {
+        list-style: none;
+        display: inline-block;
+      }
+      .switch li button {
+        height: 34px;
+        width: 100px;
+        background-color: #303030;
+        border: 0;
+        color: #92cbc5;
+      }
+      .switch li button:focus {
+        list-style: none;
+        display: inline-block;
+        height: 34px;
+        color: #303030;
+        background-color: #92cbc5;
+      }
+
       /* * * * * * * * * * * * * * * * * * * * */
       @media(max-width: 750px) {
         #main-container {
@@ -258,28 +286,29 @@
 
       </div>
       <div class="progress-bar" id="step-2">
-        <div class="highlight-1"><p>1 ACCOUNT CREATION</p></div>
-        <div class="current-step"><p>2 CAMPAIGN CREATION</p></div>
+        <div class="highlight"><p>1 account creation</p></div>
+        <div class="highlight"><p>2 campaign creation</p></div>
+        <div class="current-step"><p>3 add data sources</p></div>
       </div>
+
+
       <div id="main-container">
+        <div id="switch-container">
+        <ul class="switch">
+          <li><button>news websites</button></li>
+          <li><button>social media</button></li>
+          <li><button>forums</button></li>
+          <li><button>southeast asia <span class="orange-circle"></span></button></li>
+        </ul>
+      </div>
+
         <div id="title-container">
-          <div class="dropdown-button"><p> Keywords ^ </p></div>
-          <h2 class="grey-title"> Enter Campaign Keywords To Monitor </h2>
-        </div>
-        <div id="selected-topics-container">
-          <h3> selected topics </h3>
-          <button class="button-filled-small">Bitcoin</button>
-          <button class="button-filled-small">Litecoin</button>
+          <div class="dropdown-button"><p> Twitter ^ </p></div>
+          <h3 class="grey-title"> https://twitter.com/@bitcoinnew </h3>
         </div>
 
-        <div id="suggested-topics-container">
-          <h3> suggested topics </h3>
-          <button class="button-outline-small">Cryptocurrency</button>
-          <button class="button-outline-small">Investment Banking</button>
-          <button class="button-outline-small">Finance</button>
-        </div>
 
-  <button type="submit" id="get-started-button" class="button-secondary"><a href="data-sources.html">NEXT</a></button>
+  <button type="submit" id="get-started-button" class="button-secondary">NEXT</button>
 </div>
     </body>
     </html>
