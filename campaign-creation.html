@@ -30,6 +30,13 @@
         margin: 0;
         padding: 0;
       }
+      h3 {
+        font-family:Helvetica Neue Light;
+        font-size:14px;
+        color:#6e6e6e;
+        letter-spacing:0;
+        text-align:left;
+      }
       input {
         background-color: #303030;
         border: 1px;
@@ -65,9 +72,41 @@
         width: 160px;
         height: 62px;
       }
+      .button-secondary {
+        background:#404040;
+        box-shadow:0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+        border-radius:2px;
+        font-family: Helvetica Neue Thin;
+        width:158px;
+        height:60px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-left: calc(50% - 80px);
+        margin-top: 80px;
+        border: none;
+        outline: none;
+        color: #FFFFFF;
+        font-size: 1.4em;
+      }
+      .button-filled-small {
+        background:#92cbc5;
+        box-shadow:0 2px 2px 0 rgba(0,0,0,0.24);
+        border-radius:2px;
+        width:134px;
+        height:51px;
+        border: none;
+      }
+      .button-outline-small {
+        border:1px solid #92cbc5;
+        border-radius:2px;
+        width:132px;
+        height:49px;
+        background-color: #303030;
+        color: #92cbc5;
+      }
       #main-container {
-        border: 1px solid green;
-        margin: 0px 25vw 0 25vw;
+        border: 0px solid green;
+        margin: 0px 20vw 0 20vw;
       }
       a {
         color: #92cbc5;
@@ -157,12 +196,40 @@
         height: 40px;
         width: 90%;
         background-color: rgba(255,255,255,.08);
+        margin: 60px auto 0 auto;
+        margin-top: 60px;
         margin-left: auto;
         margin-right: auto;
         font-family: Helvetica Neue Medium;
       }
       .progress-bar p {
         margin: 14px;
+      }
+      .dropdown-button {
+        font-family:HelveticaNeue-Light;
+        font-size:16px;
+        color:#92cbc5;
+        letter-spacing:0.57px;
+        text-align:center;
+        border:1px solid #92cbc5;
+        border-radius:2px;
+        width:175px;
+        height:49px;
+        display: inline-block;
+      }
+      .grey-title {
+        display: inline-block;
+        font-family:Helvetica Neue Thin;
+        font-size:28px;
+        color:#939191;
+        letter-spacing:2px;
+        line-height:24px;
+        border-bottom: 2px solid #494949;
+        margin-left: 12px;
+        padding-bottom: 4px;
+      }
+      #title-container {
+        margin-top: 60px;
       }
       /* * * * * * * * * * * * * * * * * * * * */
       @media(max-width: 750px) {
@@ -189,8 +256,24 @@
         <div class="current-step"><p>2 CAMPAIGN CREATION</p></div>
       </div>
       <div id="main-container">
+        <div id="title-container">
+          <div class="dropdown-button"><p> Keywords ^ </p></div>
+          <h2 class="grey-title"> Enter Campaign Keywords To Monitor </h2>
+        </div>
+        <div id="selected-topics-container">
+          <h3> selected topics </h3>
+          <button class="button-filled-small">Bitcoin</button>
+          <button class="button-filled-small">Litecoin</button>
+        </div>
 
-  <button type="submit" id="get-started-button" class="button-primary">Next</button>
+        <div id="suggested-topics-container">
+          <h3> suggested topics </h3>
+          <button class="button-outline-small">Cryptocurrency</button>
+          <button class="button-outline-small">Investment Banking</button>
+          <button class="button-outline-small">Finance</button>
+        </div>
+
+  <button type="submit" id="get-started-button" class="button-secondary">NEXT</button>
 </div>
     </body>
     </html>
