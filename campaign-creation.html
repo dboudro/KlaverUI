@@ -30,18 +30,6 @@
         margin: 0;
         padding: 0;
       }
-      #logo {
-        width: 80%;
-        margin-left: 24px;
-      }
-      #tagline {
-        font-family: Helvetica Neue Thin;
-        font-size: 1.7em;
-        letter-spacing: 3px;
-        margin-top: -24px;
-        color: #F8F8F8;
-        text-align: center;
-      }
       input {
         background-color: #303030;
         border: 1px;
@@ -77,10 +65,6 @@
         width: 160px;
         height: 62px;
       }
-      #get-started-button {
-        margin-top: 60px;
-        margin-left: calc(50% - 80px);
-      }
       #main-container {
         border: 1px solid green;
         margin: 0px 25vw 0 25vw;
@@ -91,24 +75,17 @@
         margin: 0 auto;
         font-size: 1.4em;
       }
-      #login {
-        margin-top: 24px;
-      }
       #navbar {
         background-color: #80CBC4;
         height: 60px;
         display: block;
         position: relative;
       }
-      .progress-bar {
-        height: 40px;
-        width: 90%;
-        background-color: rgba(255,255,255,.08);
-        margin-left: auto;
-        margin-right: auto;
+      #nav-logo-container {
+        padding: 0 !important;
       }
       #nav-logo {
-        height: 55px;
+        height: 65px;
       }
       #navbar ul {
         display: inline-block;
@@ -117,27 +94,41 @@
         position: absolute;
         top: 0;
         margin: 0;
+        height: 60px;
       }
       #navbar ul > li {
         display: inline-block;
-        width: 300px;
+        width: 18vw;
         border: 0px solid purple;
         padding: 23px 0;
+        margin: 0;
+        border: 0px solid red;
       }
       #navbar ul > li > a {
         color: #303030;
         width: 120px;
         text-decoration: none;
       }
-
-      @media(max-width: 750px) {
-        #main-container {
-          margin: 0px 0vw 0 0vw;
-        }
+      .orange-circle {
+        background:#f05a25;
+        width:18px;
+        height:18px;
+        border-radius:100%;
       }
+
+
       #upgrade-button-item {
         padding: 17px 0px !important;
 
+      }
+      #user-panel {
+        background-color: #6DB4AD;
+        border: 0px solid red;
+        position: absolute;
+        left: 82vw;
+        height: 60px;
+        padding: 0 !important;
+        top: 0;
       }
       .upgrade-button {
         border: 1px solid #303030;
@@ -145,19 +136,58 @@
         padding: 6px 5px;
         float: right;
       }
+      .highlight-1 {
+        background:rgba(255,255,255,0.08);
+        width:20%;
+        height:39px;
+        text-align: center;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+      }
+      .current-step {
+        text-align: center;
+        color: white;
+        width:20%;
+        height: 39px;
+        padding: 0;
+        display: inline-block;
+      }
+      .progress-bar {
+        height: 40px;
+        width: 90%;
+        background-color: rgba(255,255,255,.08);
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Helvetica Neue Medium;
+      }
+      .progress-bar p {
+        margin: 14px;
+      }
+      /* * * * * * * * * * * * * * * * * * * * */
+      @media(max-width: 750px) {
+        #main-container {
+          margin: 0px 0vw 0 0vw;
+        }
+      }
       </style>
     </head>
     <body>
       <div id="navbar">
-          <img id="nav-logo" src="img/logo_klaver.png"/>
+
           <ul>
+            <li id="nav-logo-container"> <img id="nav-logo" src="img/logo_klaver.png"/> </li>
             <li> <a href="#">Campaigns</a></li>
           <li> <a href="#">Support</a></li>
           <li id="upgrade-button-item"><a class="upgrade-button"> upgrade </a></li>
+          <li id="user-panel"><span class="icon"></span> <a href="">David Smith</a> </li>
         </ul>
 
       </div>
-      <div class="progress-bar" id="step-2"></div>
+      <div class="progress-bar" id="step-2">
+        <div class="highlight-1"><p>1 ACCOUNT CREATION</p></div>
+        <div class="current-step"><p>2 CAMPAIGN CREATION</p></div>
+      </div>
       <div id="main-container">
 
   <button type="submit" id="get-started-button" class="button-primary">Next</button>
